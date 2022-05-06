@@ -177,7 +177,7 @@ exports.outdoor = class extends colyseus.Room {
         console.log(this.state.playersOnline);
         console.log(client.name);
 
-        console.log("connect Moralis");
+        /* console.log("connect Moralis");
         const serverUrl = "https://fcwtiev8egdg.usemoralis.com:2053/server";
         const appId = "wnygo27rYCQMEswBvn5memHM4cwsiZSZViwaeYoG";
         Moralis.start({ serverUrl, appId });
@@ -197,7 +197,7 @@ exports.outdoor = class extends colyseus.Room {
 
 
              await playerKillCount.save()
-        }
+        } */
 
         
 
@@ -480,7 +480,7 @@ exports.outdoor = class extends colyseus.Room {
                                     this.state.players[this.state.bullets[i].owner_id].kills += 1;
                                     console.log(this.state.players[this.state.bullets[i].owner_id].name);
                                     
-                                    const query = new Moralis.Query('PlayerKillCount');
+                                    /* const query = new Moralis.Query('PlayerKillCount');
                                     query.equalTo("player", this.state.players[this.state.bullets[i].owner_id].name);
                                     const playerKillCountQuery = await query.first();
                                     
@@ -488,7 +488,7 @@ exports.outdoor = class extends colyseus.Room {
 
                                     playerKillCountQuery.increment("kills");
                                     return playerKillCountQuery.save();
-                                    });
+                                    }); */
 
                                     this.broadcast({
                                         event: "players_online",
