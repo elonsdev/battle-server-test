@@ -42,8 +42,8 @@ class State extends Schema {
         this.bullet_index = 0;
         this.players_online = 0;
         this.killsList = [];
-        this.mapNum = Math.floor(Math.random() * 4);
-        // this.mapNum = 2;
+        // this.mapNum = Math.floor(Math.random() * 4);
+        this.mapNum = 4;
         this.mapSize = mapSizes[this.mapNum];
         this.powerups = [];
         this.powerups2 = [];
