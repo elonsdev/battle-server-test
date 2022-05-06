@@ -8,7 +8,7 @@ const path = require('path');
 
 const outdoor = require('./room/public').outdoor;
 
-const port = Number(process.env.PORT || 2567) + Number(process.env.NODE_APP_INSTANCE || 0);
+const port = Number(process.env.PORT || 3000) + Number(process.env.NODE_APP_INSTANCE || 0);
 const app = express();
 const server = http.createServer(app);
 
