@@ -176,10 +176,14 @@ exports.outdoor = class extends colyseus.Room {
     async onAuth(client, options) {
         console.log(this.state.playersOnline);
         console.log(client.name);
+        
+        if (client.name === "freePlay") {
+            return true;
+        }
 
         /* console.log("connect Moralis");
-        const serverUrl = "https://fcwtiev8egdg.usemoralis.com:2053/server";
-        const appId = "wnygo27rYCQMEswBvn5memHM4cwsiZSZViwaeYoG";
+        const serverUrl = "";
+        const appId = "";
         Moralis.start({ serverUrl, appId });
 
         const query = await new Moralis.Query('PlayerKillCount');
